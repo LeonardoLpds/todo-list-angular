@@ -1,7 +1,8 @@
 <nav>
   <ul>
     <li *ngFor="let i of service.todoTopics | async">
-      {{i.icon + " " + i.name}}
+      <span>{{i.icon + " " + i.name}}</span>
+      <button (click)="chooseTopic(i)">choose</button>
     </li>
   </ul>
 </nav>

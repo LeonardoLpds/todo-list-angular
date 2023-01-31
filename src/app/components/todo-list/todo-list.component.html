@@ -1,7 +1,7 @@
 <div>
   <ul>
-    <li *ngFor="let i of [1,2,3,4]">
-      {{"todo " + i}}
+    <li *ngFor="let i of service.todos | async">
+      {{i.name + " " + (i.completed ? "Completed" : "Uncompleted")}}
     </li>
   </ul>
 </div>
