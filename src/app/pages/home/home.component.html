@@ -1,7 +1,6 @@
 <section>
-  <!-- app-todo-lists will be a navbar with the lists of todos -->
-  <app-todo-topics (choose)="onTopicChoose($event)" ></app-todo-topics>
-  
-  <!-- show the list selected topic on the nav -->
-  <app-todo-list [topic]="topic"></app-todo-list>
+  <div class="flex">
+    <app-todo-topics (choose)="onTopicChoose($event)"></app-todo-topics>
+    <app-todo-list [topic]="topic"></app-todo-list>
+  </div>
 </section>

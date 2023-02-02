@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TodoTopicsComponent } from './components/todo-topics/todo-topics.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { EditTopicComponent } from './pages/edit-topic/edit-topic.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TodoTopicsComponent,
-    TodoListComponent
+    TodoListComponent,
+    EditTopicComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

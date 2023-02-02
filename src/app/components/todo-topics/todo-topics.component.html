@@ -1,8 +1,12 @@
-<nav>
-  <ul>
-    <li *ngFor="let i of service.todoTopics | async">
-      <span>{{i.icon + " " + i.name}}</span>
-      <button (click)="chooseTopic(i)">choose</button>
-    </li>
-  </ul>
-</nav>
+<aside class="max-w-xs h-screen truncate p-4">
+  <nav>
+    <ul>
+      <li *ngFor="let i of service.todoTopics | async" class="truncate">
+        {{i.icon}} {{i.name}}
+      </li>
+      <li class="my-4">
+        <a routerLink="/edit-topic">Adicionar tópico</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
